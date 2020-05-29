@@ -1,0 +1,6 @@
+* GET       - Information Retreival, data in url
+
+* POST      - Form Submissions, data in message body
+
+* OPTIONS   - List of all supported methods for URL
+              (Many Web Servers not Support it)

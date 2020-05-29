@@ -1,0 +1,68 @@
+            HTTP HEADERS
+            ````````````
+
+Authentication
+    WWW-Authenticate
+        * The HTTP WWW-Authenticate response header defines the authentication
+          method that should be used to gain access to a resource.
+
+        * The WWW-Authenticate header is sent along with a 401 Unauthorized response.
+          if authorization header with proper credentials is not sent with request
+
+        * WWW-Authenticate: <type> realm=<realm>
+
+            * <type>
+                - Authentication type.
+                - A common type is "Basic".
+                - IANA maintains a list of Authentication schemes.
+
+            * realm=<realm>
+                - A description of the protected area.
+                - If no realm is specified, clients often display a formatted hostname instead.
+
+        * WWW-Authenticate: Basic
+          WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
+
+
+    Authorization
+        * The HTTP Authorization request header contains the credentials to authenticate
+          a user agent with a server, usually, but not necessarily, after the server
+          has responded with a 401 Unauthorized status and the WWW-Authenticate header.
+
+        * Authorization: <type> <credentials>
+            * <type>
+                - Authentication type. A common type is "Basic".
+
+            * <credentials>
+                - If the "Basic" authentication scheme is used, the credentials are constructed like this:
+                - The username and the password are combined with a colon (aladdin:opensesame).
+                - The resulting string is base64 encoded (YWxhZGRpbjpvcGVuc2VzYW1l).
+
+            * Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
+
+
+    Proxy-Authenticate
+        Defines the authentication method that should be used to access a resource behind a proxy server.
+
+    Proxy-Authorization
+        Contains the credentials to authenticate a user agent with a proxy server.
+
+    Request Headers
+        * Accept-Charset
+        * Accept-Encoding
+        * Accept-Language
+        * Authorization
+        * Expect
+        * From
+        * Host
+        * If-Match
+        * If-Modified-Since
+        * If-None-Match
+        * If-Range
+        * If-Unmodified-Since
+        * Max-Forwards
+        * Proxy-Authorization
+        * Range
+        * Referer
+        * TE
+        * User-Agent

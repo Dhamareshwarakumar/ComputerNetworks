@@ -1,0 +1,4 @@
+<meta http-equiv='refresh' content='20'>
+	Automatically reloads the pages after 20 seconds
+
+<meta name="theme-color" content="ff0000">

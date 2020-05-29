@@ -1,0 +1,6 @@
+<Directory C:\xampp\htdocs\test>
+AuthType basic
+AuthName "Access to the staging site"
+AuthUserFile C:\xampp\htdocs\test\.htdigest
+Require valid-user
+</Directory>
